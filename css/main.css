@@ -1,0 +1,204 @@
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-Grayish-Blue);
+    font-family: 'Manrope', sans-serif;
+}
+.main {
+    width: 800px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    transition: all 0.2s;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.image {
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+.image img {
+    width: 120%;
+}
+.content {
+    width: 60%;
+    padding: 40px;
+}
+.content h1 {
+    font-size: 23px;
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--Desaturated-Dark-Blue);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.line {
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 20%;
+}
+.date {
+    width: 60%;
+}
+.date span {
+    display: block;
+}
+.date .text {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+.date .time {
+    color: var(--Desaturated-Dark-Blue);
+    font-size: 12px;
+}
+.share {
+    width: 20%;
+    text-align: end;
+    position: relative;
+}
+.share-content {
+    position: absolute;
+    width: 250px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    left: -82%;
+    top: -196%;
+    transition: all 0.2s;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.share-content::after {
+    content: '';
+    position: absolute;
+    border-width: 15px;
+    border-style: solid;
+    border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+    bottom: -30px;
+}
+.share-content span {
+    text-transform: uppercase;
+    color: var(--Grayish-Blue);
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.share-content img {
+    cursor: pointer;
+}
+.share-holder {
+    background-color: var(--Light-Grayish-Blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    margin-left: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.avatar img {
+    width: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.hide {
+    display: none !important;
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+        width: 350px;
+        height: 475px;
+    }
+    .image {
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+    }
+    .image img {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        height: 60%;
+    }
+    .content h1 {
+        font-size: 17px;
+    }
+    .content p {
+        font-size: 13px;
+    }
+    .date {
+        margin-left: 10px;
+    }
+    .share-content {
+        width: 350px;
+        left: -258px;
+        top: -14%;
+        justify-content: flex-start;
+        height: 55px;
+    }
+    .share-content span {
+        margin-left: 40px;
+    }
+    .share-content img {
+        margin-left: 10px;
+    }
+    .share-holder {
+        z-index: 10000;
+    }
+    .share-content::after {
+        display: none;
+    }
+}
